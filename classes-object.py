@@ -49,3 +49,19 @@ print(hasattr(router2, "ios"))
 print(isinstance(router2, MyRouter))
 
 
+class MyNewRouter(MyRouter):
+    def __init__(self, routername, model, serialmo, ios, portsno):
+        MyRouter.__init__(self,routername, model, serialmo, ios)
+        self.portno = portsno
+
+    def print_new_router(self, string):
+        print(string + self.model)
+
+new_router1 = MyNewRouter("newr1", "1800", "1111111", "12.2", "10")
+
+print(new_router1.portno)
+print(new_router1.model)
+new_router1.print_router("ahajdlakdaj")
+new_router1.print_new_router("ahajdlakdaj")
+
+print(issubclass(MyNewRouter, MyNewRouter))
