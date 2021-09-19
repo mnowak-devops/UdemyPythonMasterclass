@@ -3,6 +3,7 @@
   "python.linting.enabled": true,
   "files.exclude": {
     "__pycache__": true,
-    ".vscode": true
+    ".vscode": true,
+    ".idea": true
   }
 }
