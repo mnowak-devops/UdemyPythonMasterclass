@@ -4,6 +4,7 @@
   "files.exclude": {
     "__pycache__": true,
     ".vscode": true,
-    ".idea": true
+    ".idea": true,
+    "Automate_Unit_Testing\\.pytest_cache": true
   }
 }
