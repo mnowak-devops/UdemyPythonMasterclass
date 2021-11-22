@@ -17,7 +17,7 @@ class TestClass(object):
 def test_result3():
     with pytest.raises(ZeroDivisionError):
         my_exception()
-
+pr
 # Test discovery summary:
 
 # 1. By default, the collection of tests starts from testpaths (if configured - list of directories in which to search for tests when pytest is run from rootdir) or from the current directory. This is a recursive search - includes sub-directories.
