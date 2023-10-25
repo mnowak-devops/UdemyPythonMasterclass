@@ -1,6 +1,6 @@
 from datetime import datetime
 from django.shortcuts import render
-from django.http import response, HttpResponse
+from django.http import response, HttpResponse, HttpResponseNotFound
 from django.views import View
 from django.shortcuts import render, redirect
 from django.utils import timezone
@@ -27,3 +27,11 @@ class Article(View):
         form.save()
 
         return redirect("/blog/articles")
+
+class ArticleDetails(View):
+    def get(self, request, id):
+        try:
+            article = ArticleModel.objects.get(id=id)
+            return render(request, "article_details.html", {"article": article})
+        except ArticleModel.DoesNotExist:
+            return HttpResponseNotFound()

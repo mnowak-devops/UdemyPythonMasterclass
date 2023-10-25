@@ -21,6 +21,7 @@
        <p>Category: {{article.category}}</p>
        <p>Created by: {{article.author}}</p>
        <p>Posted at: {{article.created_at}}</p>
+       <a href="http://127.0.0.1:8080/blog/articles/{{ article.id }}">Read the article</a>
    </li>
    {% endfor %}
 </ul>
