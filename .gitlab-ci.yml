@@ -2,5 +2,6 @@ image: python:3.8
 
 test:
   script:
+    - cd /Web_Project/django_blog/
     - pip install django
     - python manage.py test
