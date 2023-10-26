@@ -1,0 +1,6 @@
+image: python:3.8
+
+test:
+  script:
+    - pip install django
+    - python manage.py test
